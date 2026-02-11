@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadoul 🎁</title>
+  <style>
+    body {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      cursor: pointer;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Dacă dorești să vezi cadoul, apasă pe YES 🎁</h2>
+  <button id="yesBtn">YES</button>
+</div>
+
+<script>
+  const btn = document.getElementById("yesBtn");
+
+  btn.addEventListener("mouseover", () => {
+    const x = Math.random() * (window.innerWidth - btn.offsetWidth);
+    const y = Math.random() * (window.innerHeight - btn.offsetHeight);
+
+    btn.style.left = x + "px";
+    btn.style.top = y + "px";
+  });
+
+  btn.addEventListener("click", () => {
+    alert("Bravo! Ai prins butonul 😄 Cadoul te așteaptă!");
+  });
+</script>
+
+</body>
+</html>
