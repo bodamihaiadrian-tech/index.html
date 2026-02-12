@@ -3,47 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <title>Cadoul 🎁</title>
-  <!-- 1. Include the fireworks library -->
-  <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.10.7/dist/index.umd.js"></script>
+  <!-- 1. Include the EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <!-- 2. Initialize EmailJS with your Public Key -->
+  <script type="text/javascript">
+    // 👇 YOUR PUBLIC KEY
+    (function(){
+      emailjs.init("-loWGZVR-RMsaciDO");
+    })();
+  </script>
+
   <style>
-    body {
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: Arial, sans-serif;
-      background: #000; /* Black background for better contrast */
-      color: white; /* Make text visible */
-      overflow: hidden; /* Hide scrollbars */
-    }
-
-    .container {
-      text-align: center;
-      z-index: 10; /* Ensure text and button are on top */
-    }
-
-    button {
-      padding: 15px 30px;
-      font-size: 18px;
-      cursor: pointer;
-      position: absolute;
-    }
-
-    /* Style the canvas to cover the whole screen */
-    #fireworks-canvas {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1; /* Place canvas behind other elements */
-    }
+    body { height: 100vh; display: flex; align-items: center; justify-content: center; font-family: Arial, sans-serif; background: #000; color: white; overflow: hidden; }
+    .container { text-align: center; z-index: 10; }
+    button { padding: 15px 30px; font-size: 18px; cursor: pointer; position: absolute; }
   </style>
 </head>
 <body>
-
-<!-- Canvas element for the fireworks -->
-<canvas id="fireworks-canvas"></canvas>
 
 <div class="container">
   <h2>Dacă dorești să vezi cadoul, apasă pe YES 🎁</h2>
@@ -52,9 +29,6 @@
 
 <script>
   const btn = document.getElementById("yesBtn");
-  const container = document.querySelector('.container');
-  const canvas = document.getElementById('fireworks-canvas');
-  const fireworks = new Fireworks.default(canvas);
 
   btn.addEventListener("mouseover", () => {
     const x = Math.random() * (window.innerWidth - btn.offsetWidth);
@@ -63,21 +37,31 @@
     btn.style.top = y + "px";
   });
 
-  // --- MODIFICATION HERE ---
-  // When the button is clicked, redirect to your link
+  // --- SIMPLIFIED CLICK ACTION ---
   btn.addEventListener("click", () => {
-    // Hide the button and text
-    container.style.display = 'none';
+    // Hide the button
+    btn.style.display = 'none';
 
-    // Start the fireworks
-    fireworks.start();
+    // --- Define your settings ---
+    const redirectUrl = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+    const emailParams = {
+        promo_code: "PROMO-ULTIMATE-GIFT",
+        to_email: "recipient-email@example.com"
+    };
     
-    // Show a final confirmation pop-up
-    alert("Bravo! Ai prins butonul 😄 Apasă OK pentru a vedea cadoul!");
+    // --- This function sends the email in the background ---
+    const sendEmailInBackground = () => {
+      // 👇 YOUR SERVICE ID and TEMPLATE ID
+      emailjs.send('service_r3piudo', 'template_ezoin6k', emailParams)
+        .then(res => console.log('Email successfully queued!', res.status))
+        .catch(err => console.error('Email sending failed:', err));
+    };
 
-    // **IMPORTANT**: Redirect the browser to your gift link
-    // 👇👇 REPLACE THE LINK BELOW WITH YOUR OWN! 👇👇
-    window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+    // 1. Send the email (don't wait for it)
+    sendEmailInBackground();
+
+    // 2. Immediately redirect the user
+    window.location.href = redirectUrl;
   });
 </script>
 
