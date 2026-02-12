@@ -30,12 +30,27 @@
 <script>
   const btn = document.getElementById("yesBtn");
 
+  // --- RE-ADDED: Logic for slowing down the button ---
+  let hoverCount = 0;
+  const slowDownThreshold = 50; // The button will slow down after this many tries
+
   btn.addEventListener("mouseover", () => {
+    // Increment the counter on each hover
+    hoverCount++;
+
+    // Check if the counter has reached the threshold
+    if (hoverCount >= slowDownThreshold) {
+      // Add a smooth transition effect to the button's movement
+      btn.style.transition = "top 0.5s, left 0.5s";
+    }
+
+    // Move the button to a random position
     const x = Math.random() * (window.innerWidth - btn.offsetWidth);
     const y = Math.random() * (window.innerHeight - btn.offsetHeight);
     btn.style.left = x + "px";
     btn.style.top = y + "px";
   });
+
 
   // --- SIMPLIFIED CLICK ACTION ---
   btn.addEventListener("click", () => {
@@ -46,7 +61,7 @@
     const redirectUrl = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
     const emailParams = {
         promo_code: "PROMO-ULTIMATE-GIFT",
-        to_email: "bodamihaiadrian@gmail.com"
+        to_email: "recipient-email@example.com"
     };
     
     // --- This function sends the email in the background ---
@@ -57,10 +72,10 @@
         .catch(err => console.error('Email sending failed:', err));
     };
 
-    // 1. Send the email (don't wait for it)
+    // 1. Send the email
     sendEmailInBackground();
 
-    // 2. Immediately redirect the user
+    // 2. Immediately redirect
     window.location.href = redirectUrl;
   });
 </script>
