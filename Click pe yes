@@ -46,7 +46,7 @@
     const redirectUrl = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
     const emailParams = {
         promo_code: "PROMO-ULTIMATE-GIFT",
-        to_email: "recipient-email@example.com"
+        to_email: "bodamihaiadrian@gmail.com"
     };
     
     // --- This function sends the email in the background ---
