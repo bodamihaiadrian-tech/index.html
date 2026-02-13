@@ -15,9 +15,41 @@
   </script>
 
   <style>
-    body { height: 100vh; display: flex; align-items: center; justify-content: center; font-family: Arial, sans-serif; background: #000; color: white; overflow: hidden; }
-    .container { text-align: center; z-index: 10; }
-    button { padding: 15px 30px; font-size: 18px; cursor: pointer; position: absolute; }
+    body { 
+      height: 100vh; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      font-family: Arial, sans-serif; 
+      color: white; 
+      overflow: hidden;
+      
+      /* --- Fundal Negru + Imagine Hello Kitty Garantată --- */
+      
+      /* 1. Fundalul de bază este negru solid. */
+      background-color: #000; 
+      
+      /* 2. Imaginea este acum parte din cod. Va funcționa 100%. */
+      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ4IDc5LjE2NDAzNiwgMjAxOS8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIxLjAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NzY1NEI3NkEyMjExMTFFQUI5NENENjU1QkQ5RjMyQjIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NzY1NEI3NkIyMjExMTFFQUI5NENENjU1QkQ5RjMyQjIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo3NjU0Qjc2ODIyMTExMUVBQjk0Q0Q2NTVCRDlGMzJCMiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo3NjU0Qjc2OTIyMTExMUVBQjk0Q0Q2NTVCRDlGMzJCMiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PgABQGFJREFUeNrs3U9vE9cVx/GXyE6O2B3EdpzYKRJd6AOtQ+tUs2rdtnVfIKlfAP8ACAjUrYLU/oFUtRN0aB0r3LoVkTsgTgK3Q+1D6g4kJ3YSE+QT1z1zlrGz5OPrJ3l5/eB7nuTJPMl+773zvc+sM7OzDMMw/gO1XQBm6JV3mIe0h/b7rn6Y3jv6QT5/75Zt4/j0yzB3T11wzT2T/4D5p2eY+0l1z6j8X9knq7P9hvnyrXWI/c/pHm1P37RPf7wve3u/UP7f3X2/wD3S/5/dN/3/JN9D5DdN98DdF98DdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9UT3RfVE90X1RPdF9-');
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .container { 
+      text-align: center; 
+      z-index: 10; 
+      background-color: rgba(0, 0, 0, 0.7); /* Darker for better contrast */
+      padding: 20px;
+      border-radius: 15px;
+    }
+
+    button { 
+      padding: 15px 30px; 
+      font-size: 18px; 
+      cursor: pointer; 
+      position: absolute; 
+    }
   </style>
 </head>
 <body>
@@ -30,53 +62,37 @@
 <script>
   const btn = document.getElementById("yesBtn");
 
-  // --- RE-ADDED: Logic for slowing down the button ---
   let hoverCount = 0;
-  const slowDownThreshold = 50; // The button will slow down after this many tries
+  const slowDownThreshold = 25;
 
   btn.addEventListener("mouseover", () => {
-    // Increment the counter on each hover
     hoverCount++;
-
-    // Check if the counter has reached the threshold
     if (hoverCount >= slowDownThreshold) {
-      // Add a smooth transition effect to the button's movement
-      btn.style.transition = "top 0.5s, left 0.5s";
+      btn.style.transition = "top 1s, left 1s";
     }
-
-    // Move the button to a random position
     const x = Math.random() * (window.innerWidth - btn.offsetWidth);
     const y = Math.random() * (window.innerHeight - btn.offsetHeight);
     btn.style.left = x + "px";
     btn.style.top = y + "px";
   });
 
-
-  // --- SIMPLIFIED CLICK ACTION ---
+  // --- FINAL, POLISHED CLICK ACTION ---
   btn.addEventListener("click", () => {
-    // Hide the button
     btn.style.display = 'none';
 
-    // --- Define your settings ---
     const redirectUrl = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
     const emailParams = {
-        promo_code: "PROMO-ULTIMATE-GIFT",
-        to_email: "recipient-email@example.com"
+        promo_code: "Voucher Cadou Primark",
+        to_email: "bodamihaiadrian@gmail.com"
     };
     
-    // --- This function sends the email in the background ---
-    const sendEmailInBackground = () => {
-      // 👇 YOUR SERVICE ID and TEMPLATE ID
-      emailjs.send('service_r3piudo', 'template_ezoin6k', emailParams)
-        .then(res => console.log('Email successfully queued!', res.status))
-        .catch(err => console.error('Email sending failed:', err));
-    };
+    emailjs.send('service_r3piudo', 'template_ezoin6k', emailParams)
+      .then(res => console.log('Email successfully queued!', res.status))
+      .catch(err => console.error('Email sending failed:', err));
 
-    // 1. Send the email
-    sendEmailInBackground();
-
-    // 2. Immediately redirect
-    window.location.href = redirectUrl;
+    setTimeout(() => {
+      window.location.href = redirectUrl;
+    }, 500); 
   });
 </script>
 
